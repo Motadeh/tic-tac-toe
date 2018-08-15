@@ -1,0 +1,24 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #303030;
+    max-width: 16rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container{
+    max-width: 16rem;
+    /* background-color: #303030; */
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
