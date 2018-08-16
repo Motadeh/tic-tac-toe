@@ -13,6 +13,8 @@ function setPlayer(any){
         cleargame();
         document.getElementById('score1').innerHTML = '0';
         document.getElementById('score2').innerHTML = '0';
+        score = 0;
+        scores = 0;
 	} else {
         option == 'x'? option = 'o': option = 'x';
         document.getElementById('tag').value = option;
