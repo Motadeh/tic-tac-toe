@@ -8,23 +8,26 @@
         <title>tic tac toe</title>
     </head>
     <body>
-        <div class="container">select id for player 1</div>
-        <select id="tag" name="tag" onchange="setPlayer(this.value)">
-            <option value="x">X</option>
-            <option value="o">O</option>
-        </select>
+        <div class="container">select id for player 1
+            <select id="tag" name="tag" onchange="setPlayer(this.value)">
+                <option value="x">X</option>
+                <option value="o">O</option>
+            </select>
+        </div>
 
 
         <div class="grid" id="gridContainer">
-            <button class="Button" onclick="start(this)" id="0">-</button>
-            <button class="Button" onclick="start(this)" id="1">-</button>
-            <button class="Button" onclick="start(this)" id="2">-</button>
-            <button class="Button" onclick="start(this)" id="3">-</button>
-            <button class="Button" onclick="start(this)" id="4">-</button>
-            <button class="Button" onclick="start(this)" id="5">-</button>
-            <button class="Button" onclick="start(this)" id="6">-</button>
-            <button class="Button" onclick="start(this)" id="7">-</button>
-            <button class="Button" onclick="start(this)" id="8">-</button>
+            <button class="Button a" onclick="start(this)" id="0">-</button>
+            <button class="Button b" onclick="start(this)" id="1">-</button>
+            <button class="Button c" onclick="start(this)" id="2">-</button>
+            <button class="Button d" onclick="start(this)" id="3">-</button>
+            <button class="Button e" onclick="start(this)" id="4">-</button>
+            <button class="Button f" onclick="start(this)" id="5">-</button>
+            <button class="Button g" onclick="start(this)" id="6">-</button>
+            <button class="Button h" onclick="start(this)" id="7">-</button>
+            <button class="Button i" onclick="start(this)" id="8">-</button>
         </div>
+
+        <div id="container" class="container"></div>
     </body>
 </html> 

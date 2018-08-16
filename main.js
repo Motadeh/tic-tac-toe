@@ -1,7 +1,6 @@
 let player1 = 1;
 let playerturn = 1;
 let gridarray = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-let gridarray1 = new Array('-', '-', '-', '-', '-', '-', '-', '-', '-');
 
 
 function setPlayer(any){
@@ -21,14 +20,12 @@ function setPlayer(any){
 
 function start(buttonId){
     playerId = document.getElementById('tag').value;
-    console.log(playerId)
+    document.getElementById('container').innerHTML = '';
 
     if (buttonId.id === 'x' || buttonId.id === 'o'){
-        console.log('this is x')
+        document.getElementById('container').innerHTML = 'that space is already taken\n play elsewhere';
     }
     else {
-        console.log (playerturn);
-        console.log('not x');
 
         if (playerId == 'x'){
             playerturn == 1? playerId = document.getElementById('tag').value :playerId = 'o';
@@ -55,7 +52,6 @@ function changePlayer(){
         playerturn == 1? playerturn = 2 :playerturn = 1; 
 
         if (player2 == playerturn){
-            console.log('playerchanged');
         }
         else{
             return;
@@ -79,7 +75,7 @@ function win(buttonId){
         gridarray[2]==gridarray[4] && gridarray[4]==gridarray[6] && gridarray[2] != 0
     ){
         console.log ('tada');
-        alert(`${playerturn} won`);
+        alert(`player ${playerturn} won`);
         return true;
     }
     else {
@@ -99,9 +95,7 @@ function endgame(buttonId){
 
 function cleargame(buttonId){
     gridarray = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-    console.log(gridarray);
     let y = document.getElementsByClassName('Button');
-    console.log(y[0].id);
     for (let i=0; i<9; i++){
         y[i].id = `${i}`;
         console.log(y[i].id);

@@ -12,6 +12,7 @@ html{
     grid-template-columns: 1fr 1fr 1fr;
     background-color: #303030;
     max-width: 16rem;
+    height: 200px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -21,4 +22,28 @@ html{
     text-align: center;
     margin-right: auto;
     margin-left: auto;
+}
+.Button{
+    border-color: black;
+    border-width: 5px;
+    /* background-color: #303030; */
+}
+
+.a, .b, .c, .g, .i{
+    border-top: 0px;
+}
+.f{
+    border-right: 0px;
+}
+.g, .h, .i{
+    border-bottom: 0px;
+}
+.c, .i{
+    border-right: 0px;
+}
+.e, .d, .f, .h{
+    border-top: 0px;
+}
+.d, .a, .g, .b, .c, .e, .f, .h, .i{
+    border-left: 0px;
 }
