@@ -1,28 +1,19 @@
 let player1 = 1;
 let playerturn = 1;
 let gridarray = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-let gridarray1 = new Array('-', '-', '-', '-', '-', '-', '-', '-', '-');
-
-/* function things(){
-    setPlayer();
-    squareClicked();
-    changePlayer();
-
-}
- */
-/* let option = document.getElementById('tag');
 
 
 function setPlayer(any){
+    let option = document.getElementById('tag').value
+    
     if(confirm("do you want to start a new game?"))
 	{
-		let option =  document.getElementById('tag').value;
+        option;
+        cleargame();
 	} else {
-	    document.getElementById('tag').value = option;
+        option == 'x'? option = 'o': option = 'x';
     }
-} */
-
-
+}
 
 
 function start(buttonId){

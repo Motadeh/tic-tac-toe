@@ -8,14 +8,12 @@
         <title>tic tac toe</title>
     </head>
     <body>
-        <div class="container">
-            select id for player 1
-            <select id="tag">
-                <!-- <option value="null">select option</option> -->
-                <option value="x">X</option>
-                <option value="o">O</option>
-            </select>
-        </div>
+        <div class="container">select id for player 1</div>
+        <select id="tag" name="tag" onchange="setPlayer(this.value)">
+            <option value="x">X</option>
+            <option value="o">O</option>
+        </select>
+
 
         <div class="grid" id="gridContainer">
             <button class="Button" onclick="start(this)" id="0">-</button>
