@@ -74,7 +74,6 @@ function win(buttonId){
         gridarray[0]==gridarray[4] && gridarray[4]==gridarray[8] && gridarray[0] != 0 ||
         gridarray[2]==gridarray[4] && gridarray[4]==gridarray[6] && gridarray[2] != 0
     ){
-        console.log ('tada');
         alert(`player ${playerturn} won`);
         return true;
     }
@@ -98,8 +97,7 @@ function cleargame(buttonId){
     let y = document.getElementsByClassName('Button');
     for (let i=0; i<9; i++){
         y[i].id = `${i}`;
-        console.log(y[i].id);
-        y[i].innerText = '-';
+        y[i].innerText = '';
     }
     playerturn = 1;
 }

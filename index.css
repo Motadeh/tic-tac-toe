@@ -15,6 +15,8 @@ html{
     height: 200px;
     margin-right: auto;
     margin-left: auto;
+    border: 5px 5px 5px 5px;
+    border-color: black;
 }
 .container{
     max-width: 16rem;
@@ -24,9 +26,11 @@ html{
     margin-left: auto;
 }
 .Button{
-    border-color: black;
-    border-width: 5px;
-    /* background-color: #303030; */
+    /* border-color: #e0e0e0; */
+    /* border-width: 5px; */
+    border-left: 0px;
+    font-size: 20px;
+    background-color: #ffffff;
 }
 
 .a, .b, .c, .g, .i{
@@ -41,9 +45,43 @@ html{
 .c, .i{
     border-right: 0px;
 }
-.e, .d, .f, .h{
+.d, .e, .f, .h{
     border-top: 0px;
 }
-.d, .a, .g, .b, .c, .e, .f, .h, .i{
-    border-left: 0px;
+
+.header{
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.h1{
+    background-color: blue;
+    border-radius: 100%;
+    /* padding: .25rem; */
+    /* border-style: solid; */
+    border-width: 0px;
+    height: 4rem;
+    width: 4rem;
+    text-align: center;
+    font-size: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    color: #ffffff;
+}
+
+@media screen and (min-width: 30em) {
+    .header{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+}
+.game{
+    border-width: 2px;
+    border-style: solid;
+    border-color: #e0e0e0;
+    max-width: 22rem;
+    padding: 2rem;
+    margin-right: auto;
+    margin-left: auto;
 }
