@@ -1,19 +1,22 @@
 let player1 = 1;
 let playerturn = 1;
 let gridarray = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+let gridarray1 = new Array('-', '-', '-', '-', '-', '-', '-', '-', '-');
 
 
 function setPlayer(any){
     let option = document.getElementById('tag').value
-    
     if(confirm("do you want to start a new game?"))
 	{
-        option;
+        let option =  document.getElementById('tag').value;
         cleargame();
 	} else {
         option == 'x'? option = 'o': option = 'x';
+        document.getElementById('tag').value = option;
     }
 }
+
+
 
 
 function start(buttonId){
@@ -28,32 +31,18 @@ function start(buttonId){
         console.log('not x');
 
         if (playerId == 'x'){
-            if (playerturn == 1){
-                playerId = document.getElementById('tag').value;
-            }
-            else {
-                playerId = 'o'
-            }
+            playerturn == 1? playerId = document.getElementById('tag').value :playerId = 'o';
         }else if (playerId == 'o'){
-            if (playerturn == 1){
-                playerId = document.getElementById('tag').value;
-            }
-            else {
-                playerId = 'x'
-            }
+            playerturn == 1? playerId = document.getElementById('tag').value :playerId = 'x';
         }
 
-        console.log(buttonId.id);
 
         gridarray[buttonId.id] = playerId;
-        console.log(gridarray);
 
         document.getElementById(buttonId.id).innerText = playerId;
         buttonId.setAttribute("id", playerId);
-        console.log(buttonId.id);
         
         endgame(buttonId);
-        // changePlayer();
     }
     
 }
@@ -63,19 +52,17 @@ function changePlayer(){
     let player2 = 2;
     
     if (player1 == 1){
-        console.log(playerturn);
-        if (playerturn == 1){
-            playerturn = 2
-        }else {playerturn = 1} 
-        console.log(playerturn);
+        playerturn == 1? playerturn = 2 :playerturn = 1; 
 
         if (player2 == playerturn){
             console.log('playerchanged');
         }
-        
+        else{
+            return;
+        }
     }
     else{
-        console.log('test');
+        return;
     }
 }
 
@@ -97,26 +84,17 @@ function win(buttonId){
     }
     else {
         if(gridarray.indexOf(0) > -1){
-            console.log('no');
             return false;
         }
         else {
-            console.log('tada');
-            alert('no more moves');
+            alert('no more moves\n end game');
             return true;
         }
     }
 }
 
 function endgame(buttonId){
-    if (win() == true){
-        
-        cleargame(buttonId);
-        console.log('win')
-    }
-    else {
-        changePlayer();
-    }
+    win() == true? cleargame(buttonId) :changePlayer();
 }
 
 function cleargame(buttonId){
