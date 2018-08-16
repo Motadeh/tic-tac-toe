@@ -7,16 +7,28 @@ html{
 *:after {
   box-sizing: inherit;
 }
+
+body{
+    background-color: #fafafa;
+}
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: #303030;
+    background-color: #ffffff;
     max-width: 16rem;
-    height: 200px;
+    height: 250px;
     margin-right: auto;
     margin-left: auto;
-    border: 5px 5px 5px 5px;
-    border-color: black;
+    border: 2px 2px 2px 2px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ececec;
+    border-radius: 5px;
+    max-width: 22rem;
+    padding: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    /* border-color: black; */
 }
 .container{
     max-width: 16rem;
@@ -26,8 +38,8 @@ html{
     margin-left: auto;
 }
 .Button{
-    /* border-color: #e0e0e0; */
-    /* border-width: 5px; */
+    /* border-color: black;
+    border-width: 5px; */
     border-left: 0px;
     font-size: 20px;
     background-color: #ffffff;
@@ -35,6 +47,9 @@ html{
 
 .a, .b, .c, .g, .i{
     border-top: 0px;
+}
+.a, .b, .c, .i{
+    margin-top: 2rem;
 }
 .f{
     border-right: 0px;
@@ -75,13 +90,4 @@ html{
         padding-bottom: 1rem;
     }
     
-}
-.game{
-    border-width: 2px;
-    border-style: solid;
-    border-color: #e0e0e0;
-    max-width: 22rem;
-    padding: 2rem;
-    margin-right: auto;
-    margin-left: auto;
 }
