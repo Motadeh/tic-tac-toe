@@ -1,6 +1,8 @@
 let player1 = 1;
 let playerturn = 1;
 let gridarray = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+let score = 0;
+let scores = 0;
 
 
 function setPlayer(any){
@@ -9,6 +11,8 @@ function setPlayer(any){
 	{
         let option =  document.getElementById('tag').value;
         cleargame();
+        document.getElementById('score1').innerHTML = '0';
+        document.getElementById('score2').innerHTML = '0';
 	} else {
         option == 'x'? option = 'o': option = 'x';
         document.getElementById('tag').value = option;
@@ -75,6 +79,16 @@ function win(buttonId){
         gridarray[2]==gridarray[4] && gridarray[4]==gridarray[6] && gridarray[2] != 0
     ){
         alert(`player ${playerturn} won`);
+        if(playerturn == 1){
+            // let score = 0;
+            score++;
+            document.getElementById('score1').innerHTML = score;
+
+        }
+        else {
+            scores++;
+            document.getElementById('score2').innerHTML = scores;
+        }
         return true;
     }
     else {

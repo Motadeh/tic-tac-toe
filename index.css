@@ -11,6 +11,16 @@ html{
 body{
     background-color: #fafafa;
 }
+.score{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 5rem;
+    /* background-color: #303030; */
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
